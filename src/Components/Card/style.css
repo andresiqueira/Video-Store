@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  font-family: verdana, sans-serif;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: #eee;
+  width: 100vw;
+}
+
+.Card {
+  text-align: center;
+  background-color: #111827;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 0.6rem;
+  line-height: 1.375;
+}
+
+.Card h1 {
+  font-size: 1.4rem;
+  margin-top: 1rem;
+}
+
+summary {
+  text-align: left;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.Card p {
+  font-size: 1rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.valor {
+  color: #f43f5e;
+}
+
+button {
+  margin-top: 2rem;
+  background-color: #3b82f6;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.6rem;
+  color: #eee;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #f43f5e;
+}
