@@ -1,4 +1,4 @@
-export const mock = {
+export const Mock = {
   "adult": false,
   "overview": "   Trata-se do primeiro da franquia Terminator. Produzido por Hemdale Film Corporation, Pacific Western Productions e Cinema 84 e distribuído pela Orion Pictures, é estrelado por Arnold Schwarzenegger, Michael Biehn, Linda Hamilton, Lance Henriksen e Paul Winfield.",
   "popularity": 1446.775,
@@ -6,6 +6,11 @@ export const mock = {
   "release_date": "2022-06-16",
   "title": "Exterminador do futuro",
   "vote_average": 5.9,
-  "vote_count": 83
+  "vote_count": 83,
+  "price": {
+    "full": 40.00,
+    "portion": 40/3,
+    "cash": 29.50
+  }
 }
-//CRIAR FUNÇÃO PARA CALCULAR PREÇO
+//CRIAR FUNÇÃO PARA CALCULAR E FORMATAR PREÇO

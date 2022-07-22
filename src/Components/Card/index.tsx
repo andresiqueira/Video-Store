@@ -1,30 +1,85 @@
-export const Card = () => {
+import { Cart, Information } from "../Icons"
+
+interface Price {
+  "full": number
+  "portion": number
+  "cash": number
+}
+export type ICard = {
+  image: string[]
+  title: string
+  price: Price
+  details?: string
+}
+
+export const Card = ({image, title, price, details}: ICard) => {
   return (
-    <div className="Card">
+    <div className="
+        text-center
+        bg-gray-900
+        w-64
+        w-100
+        p-8
+        text-slate-300
+        flex
+        flex-col
+        rounded-lg
+        leading-8
+        items-end
+      ">
       <img
-        src="https://media.fstatic.com/6HAeEE2_DOIgRIkx7FI2-RN1T94=/full-fit-in/629x300/media/articles/main/2020/07/02/theterminator-2000332614.jpeg"
-        alt="Exterminador do futuro"
-        width="300"
-        height="180"
+        src={image[0]}
+        alt={image[1]}
+        width="auto"
+        height="auto"
       />
-      <h1>Exterminador do futuro</h1>
-      <hr />5 Estrelas | Ação | +16 | 2008
-      
-      <details>
-        <summary>Descrição completa</summary>
-        <p>
-          Trata-se do primeiro da franquia Terminator. Produzido por Hemdale
-          Film Corporation, Pacific Western Productions e Cinema '84 e
-          distribuído pela Orion Pictures, é estrelado por Arnold
-          Schwarzenegger, Michael Biehn, Linda Hamilton, Lance Henriksen e Paul
-          Winfield.
-        </p>
-      </details>
-      <p className="valor">
-        Valor: <strong>R$ 30,60</strong> em até 3x de <strong>R$ 10,20</strong>{" "}
-        ou <strong>R$ 26,40</strong> a vista
+      <h1 className="
+        text-lg
+        font-medium
+        mt-2
+        mb-2
+      ">{title}</h1>
+      <hr className="w-full" />
+      <button className="
+        mt-2
+        mb-2
+        p-1 
+        text-sm
+        rounded-md 
+        flex
+        w-max 
+        gap-1 
+        cursor-pointer 
+        hover:underline
+        active:bg-indigo-600
+        focus:outline-none
+        focus:ring 
+        focus:ring-violet-300
+      "><Information />Detalhes</button>
+      <p className="mt-2 mb-2 text-sm">
+        <strong>R$ {price.full}</strong> em até 3x de <strong>R$ {price.portion}</strong> ou <strong>R$ {price.cash}</strong> a vista
       </p>
-      <button>COMPRAR</button>
+      <button className="
+        w-full
+        mt-2
+        p-2
+        flex
+        flex-row
+        justify-center
+        items-center
+        font-medium
+        bg-indigo-700
+        rounded-md
+        active:bg-indigo-600
+        focus:outline-none
+        focus:ring 
+        focus:ring-violet-300
+        hover:bg-indigo-600
+        transition-colors
+      ">
+        <Cart />
+        COMPRAR
+      </button>
     </div>
-  );
-};
+  )
+}
